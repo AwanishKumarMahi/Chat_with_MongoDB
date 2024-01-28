@@ -3,10 +3,23 @@ body{
     flex-direction: column;
     font-size: 1.5rem;
 }
+@media(max-width:400px){
+    #cont{
+        width: 90%;
+    }
+}
+@media(min-width:600px){
+    #cont{
+        width: 50%;
+    }
+}
+/* 
+#cont{
+    width: 50%;
+} */
 
 .chat{
-    min-width: 200px;
-    max-width: 40rem;
+    min-width: fit-content;
     border: 2px groove gray;
     margin: 1rem 0;
     background-color: #afff10;
@@ -15,8 +28,6 @@ body{
 }
 
 .chat div{
-    min-width: 200px;
-    max-height: 40rem;
     border: 1px solid grey;
     border-radius: 10px;
     margin: 5px 0;
@@ -31,4 +42,10 @@ body{
 
 .span2{    
     margin: 0 0 0 auto;
+}
+
+#button{
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    padding: .5rem;
 }

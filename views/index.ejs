@@ -8,17 +8,22 @@
 </head>
 <body>
     <h1>Chats</h1>
-
-    <% for(let chat of chats){ %>
-        <div class="chat">
-            <div id="detail">
-                <span>From:<%=chat.from%></span>
-                <span class="span2">To:<%=chat.to%></span>
+    <form action="/chat/new" method="get">
+        <button id="button">New chat</button>
+    </form>
+    <div id="cont">
+        <% for(let chat of chats){ %>
+            <div class="chat">
+                <div id="detail">
+                    <span>From:<%=chat.from%></span>
+                    <span class="span2">To:<%=chat.to%></span>
+                </div>
+                <div>
+                    <%=chat.msg%>
+                </div>
             </div>
-            <div>
-                <%=chat.msg%>
-            </div>
-        </div>
-    <% } %>
+        <% } %>
+    </div>
+    <br><br><br><br><br>
 </body>
 </html>

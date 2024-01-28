@@ -1,0 +1,65 @@
+:root{
+    font-size: 10px;
+}
+body{
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+div{
+    width: 80%;
+    height: fit-content;
+    min-width: fit-content;
+    max-width: 90rem;
+
+    background-color: #00ffae;
+    border: .3rem ridge gold;
+    border-radius: 1rem;
+
+    padding: 2rem;
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    overflow: auto;
+}
+
+h2{
+    text-align: center;
+}
+
+div input[type=text], textarea{
+    max-width: 98%;
+    min-width: fit-content;
+    width: 95%;
+    padding: 1rem;
+}
+
+div textarea{
+    height: 20vh;
+    min-height: 50%;
+    max-height: 60rem;
+}
+
+#button{
+    width: 95%;
+    min-width: fit-content;
+    max-width: 97%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem;
+
+    border: none;
+}
+
+#button input{
+    font-size: 2.5rem;
+    border-radius: 2rem;
+    padding: .5rem;
+}
+
