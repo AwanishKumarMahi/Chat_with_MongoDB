@@ -27,13 +27,26 @@ body{
     padding: 0 1rem 0.5rem;
 }
 
-.chat div{
+.chat >div{
     border: 1px solid grey;
     border-radius: 10px;
     margin: 5px 0;
     padding: 5px;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#msg div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#msg button{
+    font-size: 1rem;
+    border-radius: 1rem;
+    padding: .2rem;
 }
 
 #detail{
@@ -48,4 +61,12 @@ body{
     font-size: 1.5rem;
     border-radius: 1rem;
     padding: .5rem;
+}
+
+#date{
+    border: none;
+    display: flex;
+    align-items: end;
+    font-style: italic;
+    font-weight: 550;
 }

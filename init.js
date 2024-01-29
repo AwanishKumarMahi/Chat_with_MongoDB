@@ -2,8 +2,18 @@ const db = require("mongoose");
 const Chat = require("./models/chat.js");
 
 async function main(){
-    await db.connect("mongodb://127.0.0.1:27017/whatsapp");
+    const url = "mongodb+srv://awanishkumarhot:awanish00@cluster0.bmuxter.mongodb.net/?retryWrites=true&w=majority";
+    // const connetionParams ={
+    //     useNewUrlParser: true,
+    //     useUnifiedTopology: true
+    // }
+    await db.connect(url);
 }
+
+// For offline mongodb.
+// async function main(){
+//     await db.connect("mongodb://127.0.0.1:27017/whatsapp");
+// }
 
 main()
     .then((res)=>{

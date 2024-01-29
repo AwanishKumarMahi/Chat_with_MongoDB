@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Chats</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <h1>Chats</h1>
@@ -18,8 +18,25 @@
                     <span>From:<%=chat.from%></span>
                     <span class="span2">To:<%=chat.to%></span>
                 </div>
-                <div>
-                    <%=chat.msg%>
+                <div id="msg">
+                    <%=chat.msg%> 
+                    <div>
+                        <form action="/chat/<%=chat.id%>/edit" method="get">
+                            <button>Edit</button>
+                        </form>
+                        <form action="/chat/<%=chat.id%>?_method=DELETE" method="post">
+                            <button>Delete</button>
+                        </form>
+                    </div>
+                </div>
+                <div id="date">
+                    <%if(chat.update_at==null){%>
+                        <%=chat.created_at.toString().split(" ").slice(1,5).join(" ");%>
+                    <%}
+                    else{%>
+                        <%=chat.update_at.toString().split(" ").slice(1,5).join(" ");%>
+                    <%}%>
+
                 </div>
             </div>
         <% } %>
