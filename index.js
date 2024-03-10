@@ -40,8 +40,9 @@ main()
 
 
 app.get("/", (req,res)=>{
-    res.send("Root is working.");
-    //res.redirect("/chat");
+    // res.send("Root is working.");
+    res.redirect("/chat");
+    //only one respone can be send at a time.
 });
 
 app.get("/chat", async (req, res)=>{
