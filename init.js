@@ -1,8 +1,9 @@
 const db = require("mongoose");
 const Chat = require("./models/chat.js");
+const dotenv = require("dotenv")
 
 async function main(){
-    const url = "mongodb+srv://awanishkumarhot:awanish00@cluster0.bmuxter.mongodb.net/?retryWrites=true&w=majority";
+    const url = process.env.URL
     // const connetionParams ={
     //     useNewUrlParser: true,
     //     useUnifiedTopology: true

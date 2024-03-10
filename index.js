@@ -4,6 +4,7 @@ const db = require("mongoose");
 const path = require("path");
 const Chat = require("./models/chat.js");
 const methodOverride = require("method-override");
+const dotenv = require("dotenv").config()
 
 
 
@@ -16,12 +17,12 @@ app.use(methodOverride("_method"));
 
 
 async function main(){
-    const url = "mongodb+srv://awanishkumarhot:awanish00@cluster0.bmuxter.mongodb.net/?retryWrites=true&w=majority";
     // const connetionParams ={
     //     useNewUrlParser: true,
     //     useUnifiedTopology: true
     // }
-    await db.connect(url);
+    const connect = await db.connect(process.env.CONNECTION_STRING);
+    console.log("Database connected: ",connect.connection.host, connect.connection.name)
 }
 
 //For offline database
